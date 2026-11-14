@@ -1,0 +1,21 @@
+/* Privacy and help pages: one column of reading, paper and ink. No scripts. */
+:root {
+  color-scheme: light dark;
+  --paper: #fbf8f2; --ink: #23201b; --soft: #5d574d; --rule: #e2dbcd; --accent: #1f5d8f;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #1b1a17; --ink: #e8e3d8; --soft: #b3ac9f; --rule: #3a3731; --accent: #8cbbe3; }
+}
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Iowan Old Style", "Charter", Georgia, serif; font-size: 1.15rem; line-height: 1.6;
+}
+main { max-width: 38rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+.back { font-family: -apple-system, system-ui, sans-serif; font-size: 0.95rem; margin: 0 0 1.5rem; }
+h1 { font-weight: 600; font-size: 2.2rem; letter-spacing: -0.02em; margin: 0 0 0.25rem; }
+h2 { font-weight: 600; font-size: 1.3rem; margin: 2.2rem 0 0.4rem; }
+.lede { color: var(--soft); font-size: 1.3rem; margin: 0 0 2rem; }
+p, li { margin: 0 0 0.9rem; }
+ul { padding-left: 1.2rem; }
+a { color: var(--accent); }
+footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem; color: var(--soft); font-size: 0.95rem; }
