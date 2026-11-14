@@ -1,4 +1,4 @@
-/* Byway's website: paper and ink, the same palette as the apps. No scripts. */
+/* KananEisley's website: paper and ink, the same palette as the apps. No scripts. */
 :root {
   color-scheme: light dark;
   --paper: #fbf8f2;
@@ -94,6 +94,9 @@ th { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; color: var(
 .shots figure { margin: 0; flex: 0 0 auto; width: min(15rem, 62vw); scroll-snap-align: start; }
 .shots img { width: 100%; border-radius: 1.4rem; border: 1px solid var(--rule); }
 .shots figcaption { font-family: var(--sans); font-size: 0.85rem; color: var(--soft); margin-top: 0.5rem; text-align: center; }
+
+/* Cards linking other pages, one under another */
+.cards { display: grid; gap: 1rem; }
 
 /* A card linking another page */
 .card {
