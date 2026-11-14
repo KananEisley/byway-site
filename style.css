@@ -1,0 +1,114 @@
+/* Byway's website: paper and ink, the same palette as the apps. No scripts. */
+:root {
+  color-scheme: light dark;
+  --paper: #fbf8f2;
+  --paper-deep: #f3eee4;
+  --ink: #23201b;
+  --soft: #5d574d;
+  --faint: #8c8579;
+  --rule: #e2dbcd;
+  --accent: #1f5d8f;
+  --gold: #a87516;
+  --serif: "Iowan Old Style", "Charter", "New York", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1b1a17;
+    --paper-deep: #24221e;
+    --ink: #e8e3d8;
+    --soft: #b3ac9f;
+    --faint: #8a8377;
+    --rule: #3a3731;
+    --accent: #8cbbe3;
+    --gold: #e0b56a;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; display: block; }
+
+.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
+
+/* Top bar */
+.top {
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+}
+.top .wrap { display: flex; align-items: center; gap: 1.25rem; min-height: 3.5rem; flex-wrap: wrap; }
+.top .home { color: var(--ink); text-decoration: none; font-family: var(--serif); font-weight: 600; font-size: 1.15rem; margin-right: auto; }
+.top a { color: var(--soft); text-decoration: none; }
+.top a:hover, .top a[aria-current] { color: var(--ink); }
+
+/* Opening */
+.hero { padding: 3.5rem 0 2.5rem; text-align: center; }
+.hero .icon { width: 96px; height: 96px; border-radius: 22px; margin: 0 auto 1.25rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.15); }
+.hero h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin: 0; }
+.hero .tagline { font-style: italic; color: var(--soft); font-size: 1.4rem; margin: 0.4rem 0 1.25rem; }
+.hero .lede { max-width: 34rem; margin: 0 auto; font-size: 1.25rem; }
+.status {
+  display: inline-block; margin-top: 1.5rem; padding: 0.35rem 0.9rem;
+  border: 1px solid var(--rule); border-radius: 999px; background: var(--paper-deep);
+  font-family: var(--sans); font-size: 0.9rem; color: var(--soft);
+}
+
+/* Sections */
+section { padding: 2.25rem 0; border-top: 1px solid var(--rule); }
+h2 { font-size: 1.6rem; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 0.75rem; }
+h3 { font-size: 1.15rem; font-weight: 600; margin: 0 0 0.25rem; }
+p { margin: 0 0 1rem; }
+.soft { color: var(--soft); }
+
+/* A list of things, two columns when there's room */
+.things { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.25rem 2rem; margin-top: 1.25rem; }
+.things p { margin: 0; color: var(--soft); font-size: 1.05rem; }
+
+/* "No ..." list */
+.nots { list-style: none; padding: 0; margin: 1rem 0 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.nots li {
+  font-family: var(--sans); font-size: 0.95rem; padding: 0.3rem 0.8rem;
+  border: 1px solid var(--rule); border-radius: 999px; background: var(--paper-deep);
+}
+
+/* Tables (photo sizes) */
+table { width: 100%; border-collapse: collapse; font-size: 1.05rem; margin: 0.5rem 0 1rem; }
+th, td { text-align: left; padding: 0.5rem 0.25rem; border-bottom: 1px solid var(--rule); }
+th { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; color: var(--faint); text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* Screenshots: a row that scrolls sideways on phones */
+.shots {
+  display: flex; gap: 1rem; overflow-x: auto; padding: 0.5rem 0 1rem;
+  scroll-snap-type: x mandatory;
+}
+.shots figure { margin: 0; flex: 0 0 auto; width: min(15rem, 62vw); scroll-snap-align: start; }
+.shots img { width: 100%; border-radius: 1.4rem; border: 1px solid var(--rule); }
+.shots figcaption { font-family: var(--sans); font-size: 0.85rem; color: var(--soft); margin-top: 0.5rem; text-align: center; }
+
+/* A card linking another page */
+.card {
+  display: flex; gap: 1.25rem; align-items: center; text-decoration: none; color: var(--ink);
+  padding: 1.25rem; border: 1px solid var(--rule); border-radius: 1rem; background: var(--paper-deep);
+}
+.card img { width: 72px; height: 72px; border-radius: 16px; flex: 0 0 auto; }
+.card p { margin: 0; color: var(--soft); font-size: 1.05rem; }
+.card:hover h3 { color: var(--accent); }
+
+.price { font-size: 1.3rem; font-weight: 600; }
+
+footer {
+  border-top: 1px solid var(--rule); margin-top: 1rem; padding: 1.5rem 0 3rem;
+  font-family: var(--sans); font-size: 0.9rem; color: var(--faint);
+}
+footer .wrap { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+footer a { color: var(--soft); }

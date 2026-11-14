@@ -3,24 +3,131 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Byway</title>
-  <meta name="description" content="The calm web. Pages, not feeds.">
-  <style>
-    :root { color-scheme: light dark; --paper: #fbf8f2; --ink: #23201b; --soft: #5d574d; }
-    @media (prefers-color-scheme: dark) { :root { --paper: #1b1a17; --ink: #e8e3d8; --soft: #b3ac9f; } }
-    html, body { height: 100%; margin: 0; }
-    body {
-      display: grid; place-items: center; background: var(--paper); color: var(--ink);
-      font-family: "Iowan Old Style", "Charter", Georgia, serif; text-align: center; padding: 2rem;
-    }
-    h1 { font-style: italic; font-weight: 600; font-size: 4rem; letter-spacing: -0.03em; margin: 0; }
-    p { color: var(--soft); font-size: 1.25rem; margin: 0.75rem 0 0; }
-  </style>
+  <title>Byway: the calm web</title>
+  <meta name="description" content="Byway is a separate, calmer web of plain, well-made pages: no pop-ups, no autoplay, no tracking, no algorithms. On iPhone.">
+  <link rel="icon" href="/images/byway-icon.png">
+  <link rel="apple-touch-icon" href="/images/byway-icon.png">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <main>
-    <h1>Byway</h1>
-    <p>The calm web. Pages, not feeds. Coming soon.</p>
+  <header class="top">
+    <div class="wrap">
+      <a class="home" href="/" aria-current="page">Byway</a>
+      <a href="#what">What it is</a>
+      <a href="#privacy">Privacy</a>
+      <a href="/lens/">Byway Lens</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <img class="icon" src="/images/byway-icon.png" alt="" width="96" height="96">
+      <h1>Byway</h1>
+      <p class="tagline">The calm web.</p>
+      <p class="lede">What if the web had chosen privacy and fairness over algorithms and social media? Byway is a separate web of plain, well-made pages, reached through the Byway app for iPhone.</p>
+      <span class="status">In beta on iPhone · Coming to the App Store</span>
+    </div>
+
+    <section id="what">
+      <h2>Calm by design, not by blocking</h2>
+      <p>Byway pages simply can't do the things that made the web tiring. There's no way to write them into a page, and the Byway app draws every page itself, in the same careful type.</p>
+      <ul class="nots">
+        <li>No pop-ups</li>
+        <li>No autoplay</li>
+        <li>No moving ads</li>
+        <li>No cookie banners</li>
+        <li>No scripts</li>
+        <li>No tracking</li>
+        <li>No algorithmic feeds</li>
+      </ul>
+      <p class="soft">Links to the regular web open in Safari, after Byway shows you where they go, with tracking codes taken out.</p>
+    </section>
+
+    <section>
+      <h2>What you'll find</h2>
+      <div class="things">
+        <div>
+          <h3>Pages, beautifully set</h3>
+          <p>Every site on Byway is read the same calm way: good type, room to breathe, nothing moving.</p>
+        </div>
+        <div>
+          <h3>Search</h3>
+          <p>Finds Byway pages by what they say. It keeps no logs of what anyone searches.</p>
+        </div>
+        <div>
+          <h3>Your own profile</h3>
+          <p>A small site of your own: a photo, your name, a few words about you, a blog and photo albums. Filled in with a simple form. No code.</p>
+        </div>
+        <div>
+          <h3>Town Square</h3>
+          <p>Short posts from everyone's profiles, newest first. No likes, no reposts, nothing promoted. The only number is how many replies a post has.</p>
+        </div>
+        <div>
+          <h3>Messages</h3>
+          <p>Between you and your contacts, from your iPhone to theirs. There's no message server keeping them.</p>
+        </div>
+        <div>
+          <h3>Inner Circle</h3>
+          <p>Up to 25 people you choose. Posts and albums for your Inner Circle are locked so only they can open them.</p>
+        </div>
+        <div>
+          <h3>Rings</h3>
+          <p>Profiles linked around a shared interest, the way webrings used to work. Join one, or start your own.</p>
+        </div>
+        <div>
+          <h3>Encyclopedia, Weather, Transparency</h3>
+          <p>Wikipedia articles, forecasts, and US campaign money and Congress, shown as calm Byway pages.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <h2>Private, and fair</h2>
+      <div class="things">
+        <div>
+          <h3>No accounts, no passwords</h3>
+          <p>Who you are is a key that stays on your iPhone and in your own iCloud Keychain. Face ID opens it. It's never on our servers.</p>
+        </div>
+        <div>
+          <h3>Nothing follows you</h3>
+          <p>No cookies, and a page can only load things from its own site, so nobody else sees what you read.</p>
+        </div>
+        <div>
+          <h3>We keep almost nothing</h3>
+          <p>No logs of who visits what. Besides public site names, our servers hold only copies of what people publish for everyone, for a day, and nothing private they could read.</p>
+        </div>
+        <div>
+          <h3>Nobody can buy attention</h3>
+          <p>Feeds are in time order, never ranked for you. No paid or featured placement anywhere, ever.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Price</h2>
+      <p><span class="price">Reading Byway is free.</span></p>
+      <p>Your own profile, posting in Town Square and the rest are free for 30 days, then $4.99 a month. Paying never makes anyone more visible. While Byway is in beta, nothing is charged.</p>
+    </section>
+
+    <section>
+      <h2>Also from Byway</h2>
+      <a class="card" href="/lens/">
+        <img src="/images/lens-icon.png" alt="" width="72" height="72">
+        <div>
+          <h3>Byway Lens</h3>
+          <p>A calm camera that keeps small copies of your photos in your own iCloud Drive, apart from Apple Photos.</p>
+        </div>
+      </a>
+    </section>
   </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Byway</span>
+      <a href="/lens/">Byway Lens</a>
+      <a href="/lens/support/">Byway Lens help</a>
+      <a href="/lens/privacy/">Byway Lens privacy</a>
+    </div>
+  </footer>
 </body>
 </html>
